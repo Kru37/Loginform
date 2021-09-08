@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Caladea&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+input {
+  font-family: "Caladea", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
   min-height: 100vh;
+  overflow: hidden;
+}
+
+.form-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 0 5rem;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* .bb{
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin:10px 0 ;
+  padding: 0 0.9rem;
+  border-radius: 55px;
+  
+} */
+.inputfield {
+  margin-bottom: 10px;
+}
+.icon {
+  color: rgb(194, 194, 194);
+}
+
+.social-text {
+  padding: 0.7rem 0;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+.social-icon:hover {
+  color: #fc8181;
+}
+
+.signup-signup {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  background-image: linear-gradient(-45deg, #fc8181 0%, #f56565 100%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.signin-signup {
+  transform: translateY(-100%);
+}
+.signin-btn {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: rgb(22, 22, 129);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.signin-signup-clicked {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.signup-signup-clicked {
+  transform: translate(100%, 0);
+}
+
+@media screen and (max-width: 740px) {
+  .signin-signup-clicked {
+    top: 50%;
+    left: 50%;
   }
-  to {
-    transform: rotate(360deg);
+  .signup-signup {
+    top: 50%;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .social-text {
+    font-size: 0.8rem;
+  }
+  ::placeholder {
+    font-size: 0.85rem;
+    color: rgb(32, 32, 32);
   }
 }
